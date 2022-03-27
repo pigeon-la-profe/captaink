@@ -7,7 +7,7 @@
 80kb$=INKEY$:IFkb$=""THENGOTO50
 90_turbooff
 100VDP(1)=VDP(1)AND191
-110BLOAD"C26.sc2",S
+110BLOAD"C27.sc2",S
 120BLOAD"sprites.sc2",S
 130LOAD"capk.bas",R
 140'LOAD"captaink.bas"
