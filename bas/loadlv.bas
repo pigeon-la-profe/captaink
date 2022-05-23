@@ -2,7 +2,8 @@
 2'https://konamiman.github.io/MSX2-Technical-Handbook/md/Chapter2.html#31-users-area
 100tp%=0:POKE VAL("&H"+HEX$(VARPTR(tp%))),PEEK(&HFC4A):POKE VAL("&H"+HEX$(VARPTR(tp%)+1)),PEEK(&HFC4B):clear200,tp%:DEFINTA-Z
 110tp=0:POKE VAL("&H"+HEX$(VARPTR(tp))),PEEK(&HFC4A):POKE VAL("&H"+HEX$(VARPTR(tp)+1)),PEEK(&HFC4B)
-200le=PEEK(tp):pu=0:DIMHI(14,3):km=0:kn=0:ks=0:ld=0:h4=0:ck=27:lk=0:pm=0:p1=0:p2=0:py=0:px=0:pz=0:ph=3:cs=8
+200le=PEEK(tp):pu=0:c2=PEEK(tp+77):DIMHI(14,3):km=0:kn=0:ks=0:ld=0:h4=0:ck=27:lk=0:pm=0:p1=0:p2=0:py=0:px=0:pz=0:ph=3:cs=8
+210sc=le\40:IFsc<>c2THENsc$=RIGHT$(STR$(sc),LEN(STR$(sc))-1):VDP(1)=VDP(1)AND191:BLOAD"C"+sc$+".sc2",S:POKEtp+77,sc
 300DIMPL(14,3):DIMC0(1,9):DIMC1(6,2):DIMM0(1,4):DIMM1(4,2):DIMR1(4,3):DIMC(101):ld=0
 500OPEN"levels11.dat"AS#1LEN=4:FIELD #1,2 as b$:FORi=1to101:get#1,i+le*(101):C(i-1)=CVI(b$):NEXTi:CLOSE#1:GOSUB20000:GOSUB30000
 510ERASEPL,C0,C1,M0,M1,R1,C:VDP(1)=VDP(1)OR64
