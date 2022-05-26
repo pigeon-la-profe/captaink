@@ -1,6 +1,6 @@
 # captaink
 MSX-BASIC game
-Captain Krik is a MSX game developed using MSX-BASIC. The game requires MSX-BASIC KUN rom, inserted in one slot.
+Captain Kreek is a MSX game developed using MSX-BASIC. The game requires MSX-BASIC KUN rom, inserted in one slot.
 
 Game is presented in dsk image file and rom image file. Disk image file format is intended to be use in emulators, but the needed files, excepting MSX-BASIC KUN rom, can be also found in this repository and can be copied to a real disk and used in a real MSX machine.
 Rom image file is also intended to be use in emulators. It can be used also in real MSX machines, flashing rom cartridges.
